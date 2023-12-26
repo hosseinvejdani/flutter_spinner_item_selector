@@ -1,4 +1,5 @@
 
+
 # Flutter Spinner Item Selector
 
 A Flutter package providing a simple way for define a spinner item selector. The package will works for any provided list of items with optional types. for example, you can provide list of widgets, enums or any other objects.
@@ -11,10 +12,10 @@ A Flutter package providing custom item selector widgets for easy item selection
 ## Preview
 
 ### Dark Mode
-
-
+![dark-spinner-item-picker](https://github.com/hosseinvejdani/flutter_spinner_item_selector/assets/18458798/8af22342-40a5-4498-b3ae-59c9bbe304fc)
 
 ## Light Mode
+![light-spinner-item-picker](https://github.com/hosseinvejdani/flutter_spinner_item_selector/assets/18458798/8d0808a9-e0a8-451d-ba11-79a869ea9b45)
 
 
 
