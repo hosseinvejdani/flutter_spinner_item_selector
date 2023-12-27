@@ -88,20 +88,3 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          Text("text"),
-          ListTile(leading: Icon(Icons.home),title: Text("Home")),
-          ListTile(leading: Icon(Icons.book),title: Text("Book")),
-          ListTile(leading: Icon(Icons.home),title: Text("Home")),
-        ],
-      ),
-    );
-  }
-}
