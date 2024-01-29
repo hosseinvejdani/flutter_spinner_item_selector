@@ -1,6 +1,6 @@
 name: flutter_spinner_item_selector
 description: "A Flutter package providing a simple way for define a spinner item selector. The package will works for any provided list of items with optional types. for example, you can provide list of widgets, enums or any other objects."
-version: 0.0.3
+version: 1.0.0
 homepage: https://github.com/hosseinvejdani/flutter_spinner_item_selector
 
 environment:

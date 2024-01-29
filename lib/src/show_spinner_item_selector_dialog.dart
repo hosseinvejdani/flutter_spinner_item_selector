@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinner_item_selector/flutter_spinner_item_selector.dart';
 
-
 // Function to show a dialog with a spinner-based item selector
 Future<T?> showSpinnerItemSelector<T>(
   BuildContext context, {
   required List<T> items,
+  final Axis? scrollAxis, // Axis of scroll
   required Widget Function(dynamic item) selectedItemToWidget, // selected item to Widget function
   required Widget Function(dynamic item) nonSelectedItemToWidget, // non-selected item to Widget function
   int initSelectedIndex = 0,
@@ -23,6 +23,7 @@ Future<T?> showSpinnerItemSelector<T>(
   double? spinnerHeight, // Height of spinner
   double? spinnerWidth, // Width of spinner
   double? itemHeight, // Height of items in spinner
+  double? itemWidth, // Width of items in spinner
   Color? spinnerBgColor, // bgColor of spinner at selector dialog
   EdgeInsets? contentPadding,
   String? cancelButtonLabel,
@@ -51,6 +52,7 @@ Future<T?> showSpinnerItemSelector<T>(
   final _spinnerHeight = spinnerHeight ?? 0.7 * _height; // height spinner
   final _spinnerWidth = spinnerWidth ?? 0.21 * _width; // width spinner
   final _itemHeight = itemHeight ?? 0.35 * _spinnerHeight;
+  final _itemWidth = itemWidth ?? 0.35 * _spinnerWidth;
 
   assert(_itemHeight <= _spinnerHeight, "should itemHeight > spinnerHeight");
   assert(_spinnerHeight <= _height, "should spinnerHeight > height");
@@ -112,9 +114,11 @@ Future<T?> showSpinnerItemSelector<T>(
               child: SpinnerItemSelector(
                 items: items,
                 initSelectedIndex: initSelectedIndex,
+                scrollAxis: scrollAxis,
                 height: _spinnerHeight,
                 width: _spinnerWidth,
                 itemHeight: _itemHeight,
+                itemWidth: _itemWidth,
                 spinnerBgColor: _spinnerBgColor,
                 selectedItemToWidget: selectedItemToWidget,
                 nonSelectedItemToWidget: nonSelectedItemToWidget,

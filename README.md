@@ -232,6 +232,7 @@ class MyWidget extends StatelessWidget {
                 ListTile(leading: Icon(Icons.book),title: Text("Book")),
                 ListTile(leading: Icon(Icons.sd_card),title: Text("sdCard")),
             ],
+            scrollAxis: Axis.vertical, // customizable
             selectedItemToWidget: (item) => Container(child: items), // map item to widget
             nonSelectedItemToWidget: (item) => Container(child: items), // map item to widget
             onSelectedItemChanged: (item) {
@@ -240,6 +241,7 @@ class MyWidget extends StatelessWidget {
             height: _spinnerHeight,
             width: _spinnerWidth,
             itemHeight: _itemHeight,
+            itemWidth: _itemWidth,
             spinnerBgColor: _spinnerBgColor,
           ),
         ],

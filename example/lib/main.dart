@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark,
       ),
-      
       home: const MyHomePage(),
     );
   }
@@ -50,9 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Icon(Icons.bolt_outlined),
         Icon(Icons.read_more),
       ],
+      scrollAxis: Axis.vertical,
       selectedItemToWidget: (item) => item,
       nonSelectedItemToWidget: (item) => Opacity(opacity: 0.4, child: item as Icon),
       itemHeight: 50,
+      itemWidth: 50,
       height: 150,
       width: 100,
       spinnerHeight: 140,
@@ -87,4 +88,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

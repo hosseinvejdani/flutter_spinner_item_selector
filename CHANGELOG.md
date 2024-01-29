@@ -1,3 +1,7 @@
+## 1.0.0
+
+* add custom scroll axis capability
+
 ## 0.0.3
 
 * add tag
